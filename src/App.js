@@ -3,6 +3,7 @@ import './App.css';
 import io from "socket.io-client";
 import Factory from './Factory'
 import FactoryCreationForm from './FactoryCreationForm'
+import HttpsRedirect from 'react-https-redirect';
 
 const hostname = window && window.location && window.location.hostname;
 let server_url = ''
@@ -83,17 +84,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className={'App'}>
-        <h3 className={'root'}>
-          Root {this.state.root.id}
-        </h3>
-        <div>
-          {this.state.root.factories ? this.renderFactories() : null}
+      <HttpsRedirect>
+        <div className={'App'}>
+          <h3 className={'root'}>
+            Root {this.state.root.id}
+          </h3>
+          <div>
+            {this.state.root.factories ? this.renderFactories() : null}
+          </div>
+          <div>
+            <FactoryCreationForm handleSubmit={this.handleFactoryOSubmit}/>
+          </div>
         </div>
-        <div>
-          <FactoryCreationForm handleSubmit={this.handleFactoryOSubmit}/>
-        </div>
-      </div>
+      </HttpsRedirect>
     );
   }
 }
