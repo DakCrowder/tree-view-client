@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Node from './Node'
 import ErrorBanner from './ErrorBanner'
+import './Node.css'
+import './Factory.css'
 
 export default class Factory extends Component {
   constructor(props) {
@@ -152,7 +154,7 @@ export default class Factory extends Component {
             <span>
               {this.props.factory.name}
             </span>
-            <span className="range">
+            <span className={'range'}>
               Current Range: {this.props.factory.lowerBound} to {this.props.factory.upperBound}
             </span>
           </div>
@@ -166,7 +168,7 @@ export default class Factory extends Component {
           </div>
           {this.state.error ? <ErrorBanner error={this.state.error} /> : null}
         </div>
-        <div className="node-container">
+        <div className={'node-container'}>
           {this.renderNodes(this.props.factory.nodes)}
         </div>
       </div>

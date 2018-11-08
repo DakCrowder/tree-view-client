@@ -1,0 +1,33 @@
+.node {
+    margin-left: 50px;
+    border-left: 1px solid black;
+}
+
+.node .number {
+    display: inline-block;
+}
+
+.node-container {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.node-container .node:last-child {
+    border-left: none;
+}
+
+.node-container .node:last-child .node-y-connector {
+    border-left: 1px solid black;
+}
+
+.node-x-connector {
+    display: inline-block;
+    height: 18px;
+    width: 15px;
+    padding-right: 5px;
+}
+
+.node-y-connector {
+    border-bottom: 1px solid black;
+    height: 12px;
+}

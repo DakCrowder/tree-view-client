@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import ErrorBanner from './ErrorBanner'
 
 export default class FactoryCreationForm extends Component {

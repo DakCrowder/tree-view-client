@@ -1,0 +1,39 @@
+.factory-container .factory:last-child {
+    border-left: none;
+}
+
+.factory-container .factory:last-child .x-connector {
+    border-left: 1px solid black;
+}
+
+.factory {
+    margin-left: 25px;
+    border-left: 1px solid black;
+    position: relative;
+    padding-top: 10px;
+}
+
+.factory .inline-container {
+    height: 30px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.factory .y-connector {
+    display: inline-block;
+    height: 56px;
+    width: 25px;
+    padding-right: 10px;
+    position: absolute;
+    top: 0;
+}
+
+.factory .x-connector {
+    height: 25px;
+    border-bottom: 1px solid black;
+}
+
+.data-container {
+    padding-left: 50px;
+}

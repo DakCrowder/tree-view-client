@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import './App.css';
-import io from "socket.io-client";
+import React, { Component } from 'react'
+import './App.css'
+import io from "socket.io-client"
 import Factory from './Factory'
 import FactoryCreationForm from './FactoryCreationForm'
-import HttpsRedirect from 'react-https-redirect';
+import HttpsRedirect from 'react-https-redirect'
 
-const hostname = window && window.location && window.location.hostname;
+const hostname = window && window.location && window.location.hostname
 let server_url = ''
 if (hostname.includes('localhost')) {
   server_url = 'http://localhost:3000'
