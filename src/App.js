@@ -4,6 +4,14 @@ import io from "socket.io-client";
 import Factory from './Factory'
 import FactoryCreationForm from './FactoryCreationForm'
 
+const hostname = window && window.location && window.location.hostname;
+let server_url = ''
+if (hostname.includes('localhost')) {
+  server_url = 'http://localhost:3000'
+} else {
+  server_url = 'https://pure-plains-81025.herokuapp.com/'
+}
+
 class App extends Component {
 
   constructor() {
@@ -20,7 +28,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const socket = io('http://localhost:3000', {
+    const socket = io(server_url, {
       reconnectionDelay: 1000,
       reconnection: true,
       reconnectionAttemps: 10,
